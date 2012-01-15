@@ -1,19 +1,19 @@
 LOCAL_PATH := $(call my-dir)
-LIBCAMERA_BUILD := nexus
+LIBCAMERA_BUILD := shooter
 include $(call all-subdir-makefiles)
 
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS    := optional
 LOCAL_MODULE_PATH    := $(TARGET_OUT_SHARED_LIBRARIES)
-#/hw
+
 LOCAL_MODULE         := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_SRC_FILES      := cameraHal.cpp
 LOCAL_PRELINK_MODULE := false
 CAMERA_LIB           := camera-inc
 
 ifeq ($(LIBCAMERA_BUILD),nexus)
-CAMERA_LIB := camera-nexus
+CAMERA_LIB := camera-shooter
 endif
 
 TARGET_GLOBAL_LD_DIRS  += -L$(LOCAL_PATH)
