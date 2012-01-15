@@ -12,7 +12,7 @@ LOCAL_SRC_FILES      := cameraHal.cpp
 LOCAL_PRELINK_MODULE := false
 CAMERA_LIB           := camera-inc
 
-ifeq ($(LIBCAMERA_BUILD),nexus)
+ifeq ($(LIBCAMERA_BUILD),shooter)
 CAMERA_LIB := camera-shooter
 endif
 
