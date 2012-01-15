@@ -5,8 +5,12 @@ include $(call all-subdir-makefiles)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS    := optional
+<<<<<<< HEAD
 LOCAL_MODULE_PATH    := $(TARGET_OUT_SHARED_LIBRARIES)
 #/hw
+=======
+LOCAL_MODULE_PATH    := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+>>>>>>> 3fb54dc4a0d51ea87d154237f66c8165b8984c77
 LOCAL_MODULE         := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_SRC_FILES      := cameraHal.cpp
 LOCAL_PRELINK_MODULE := false
@@ -16,8 +20,12 @@ ifeq ($(LIBCAMERA_BUILD),nexus)
 CAMERA_LIB := camera-nexus
 endif
 
+<<<<<<< HEAD
 TARGET_GLOBAL_LD_DIRS  += -L$(LOCAL_PATH)
 LOCAL_LDFLAGS   += -l${CAMERA_LIB} -lcameraSP
+=======
+TARGET_GLOBAL_LD_DIRS  += -L$(LOCAL_PATH) -l${CAMERA_LIB}
+>>>>>>> 3fb54dc4a0d51ea87d154237f66c8165b8984c77
 LOCAL_SHARED_LIBRARIES := liblog libdl libutils libcamera_client libbinder libcutils libhardware
 LOCAL_C_INCLUDES       := frameworks/base/services/ frameworks/base/include
 LOCAL_C_INCLUDES       += hardware/libhardware/include/ hardware/libhardware/modules/gralloc/

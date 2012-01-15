@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
+<<<<<<< HEAD
 #define LOG_NDEBUG 0
+=======
+>>>>>>> 3fb54dc4a0d51ea87d154237f66c8165b8984c77
 #define LOG_TAG "CameraHAL"
 
 #include <CameraHardwareInterface.h>
@@ -125,7 +128,11 @@ CameraHAL_CopyBuffers_Hw(int srcFd, int destFd,
 
     LOGV("CameraHAL_CopyBuffers_Hw: srcFD:%d destFD:%d srcOffset:%#x"
          " destOffset:%#x x:%d y:%d w:%d h:%d\n", srcFd, destFd, srcOffset,
+<<<<<<< HEAD
          destOffset, x, y, w, h);
+=======
+         dstOffset, x, y, w, h);
+>>>>>>> 3fb54dc4a0d51ea87d154237f66c8165b8984c77
 
     memset(&blit, 0, sizeof(blit));
     blit.count = 1;
