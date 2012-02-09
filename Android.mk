@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
-LIBCAMERA_BUILD := shooter
+LIBCAMERA_BUILD := shooteru
 include $(call all-subdir-makefiles)
 
 include $(CLEAR_VARS)
@@ -12,8 +12,8 @@ LOCAL_SRC_FILES      := cameraHal.cpp
 LOCAL_PRELINK_MODULE := false
 CAMERA_LIB           := camera-inc
 
-ifeq ($(LIBCAMERA_BUILD),shooter)
-CAMERA_LIB := camera-shooter
+ifeq ($(LIBCAMERA_BUILD),shooteru)
+CAMERA_LIB := camera-shooteru
 endif
 
 TARGET_GLOBAL_LD_DIRS  += -L$(LOCAL_PATH)
